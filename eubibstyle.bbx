@@ -1,0 +1,38 @@
+\ProvidesFile{eubibstyle.bbx}
+\RequireBibliographyStyle{standard}
+\RequireBibliographyStyle{authortitle} % change this if you're not using author-year
+\DeclareFieldFormat[article,incollection,unpublished]{title}{#1}%No quotes for article titles
+\DeclareFieldFormat[thesis]{title}{\mkbibemph{#1}} % Theses like book titles
+\DeclareFieldFormat[article]{volume}{{\bf #1}}
+\DeclareFieldFormat[article]{year}{~(#1)}
+\DeclareFieldFormat[article]{pages}{#1}
+\DeclareBibliographyDriver{article}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \usebibmacro{author/translator+others}:%
+  \setunit{\labelnamepunct}\newblock
+  \usebibmacro{title}%
+  \newunit
+  \printlist{language}%
+  \newunit\newblock
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \usebibmacro{bytranslator+others}%
+  \newunit\newblock
+  \printfield{version}%
+  \newunit\newblock%
+  \usebibmacro{journal}%
+  %
+  \printfield{volume},
+  \usebibmacro{byeditor+others}%
+  \newunit\newblock
+  \usebibmacro{doi+eprint+url}%
+  \newunit\newblock
+  \usebibmacro{addendum+pubstate}%
+  \setunit{\bibpagerefpunct}\newblock
+  \printfield{pages}%
+  \newblock
+  \printfield{year}
+  \usebibmacro{finentry}}
+  
+  
