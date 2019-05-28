@@ -122,7 +122,7 @@ chamber is 0.7 mm. The thickness of the chamber is 0.5 mm.}
 \section{ATP determination}
 \label{atp}
 \begin{itemize}
-\item \textbf{Goal:} Assay to determine the ATP levels in tissue slices.
+%\item \textbf{Goal:} Assay to determine the ATP levels in tissue slices.
 \item \textbf{Materials:}
 \begin{itemize}
 \item 1.5mL tubes
@@ -159,12 +159,18 @@ Dissolve lyophilized luciferase in exactly 10.0 ml MQ-water and mix by swinging.
  \textbf{A}	 	& 10$\mu$l ATP-standard (S)	& 90							& 1.65$\times$ 10$^{-3}$\\
  \hline
  \textbf{B}	 	& 50$\mu$l [A]				 & 450						& 1.65 $\times$ 10$^{-4}$\\
- \hline \textbf{C}	 	& 50$\mu$l [B]			 	& 450						& 1.65 $\times$ 10$^{-5}$\\
- \hline \textbf{Cal 1}	&  50$\mu$l [C]			   	& 450						& 1.65 $\times$10$^{-6}$\\
- \hline \textbf{Cal 2}	& \textbf{100$\mu$l [Cal 1]!}	& \textbf{400}					& 3.30 $\times$ 10$^{-7}$\\
- \hline \textbf{Cal 3}	& 50$\mu$l [Cal 1]!	 	  	& 450						& 1.65 $\times$ 10$^{-7}$\\
- \hline \textbf{Cal 4}	& \textbf{100$\mu$l [Cal 3]!}	& \textbf{400}					& 3.30 $\times$ 10$^{-8}$\\
- \hline \textbf{Cal 5}	& 50$\mu$l [Cal 3]!			& 450						& 1.65 $\times$ 10$^{-8}$\\
+ \hline
+ \textbf{C}	 	& 50$\mu$l [B]			 	& 450						& 1.65 $\times$ 10$^{-5}$\\
+ \hline
+ \textbf{Cal 1}	&  50$\mu$l [C]			   	& 450						& 1.65 $\times$10$^{-6}$\\
+ \hline
+ \textbf{Cal 2}	& \textbf{100$\mu$l [Cal 1]!}	& \textbf{400}					& 3.30 $\times$ 10$^{-7}$\\
+ \hline
+ \textbf{Cal 3}	& 50$\mu$l [Cal 1]!	 	  	& 450						& 1.65 $\times$ 10$^{-7}$\\
+ \hline
+ \textbf{Cal 4}	& \textbf{100$\mu$l [Cal 3]!}	& \textbf{400}					& 3.30 $\times$ 10$^{-8}$\\
+ \hline
+ \textbf{Cal 5}	& 50$\mu$l [Cal 3]!			& 450						& 1.65 $\times$ 10$^{-8}$\\
 \hline
 	\end{tabular}
 \end{center}
@@ -179,5 +185,60 @@ Dissolve lyophilized luciferase in exactly 10.0 ml MQ-water and mix by swinging.
 
 \section{Protein determination}
 \label{protein}
+\begin{itemize}
+\item \textbf{Materials:}
+\begin{itemize} 
+\item BSA stock solution 3.2 (A) and 2.4 (B) mg/mL\item Water bath with shaking function\item Minibead beater\item Transparent flat 96-wells plate\item Multichannel pipet\item Protein reader absorbance at wavelength 650nm*
+\end{itemize}
+\item \textbf{Solutions:}
+\begin{itemize}
+\item 5M NaOH solution (20g sodium hydroxide/100mL)
+\item Reagent A and B of BIO-rad kit.
+\end{itemize}
+\item\textbf{Protocol}:
+\begin{enumerate}
+\item Turn on waterbath 
+\item Thaw BSA (3.2 and 2.4 mg/ml)
+\item Add (to pellet and beads) 200 $\mu$l 5M NaOH (20g in 100ml)
+\item Incubate 30 min at 37$^{\circ}$C (shaking, high speed) inside the waterbath
+\item Make the following calibration curve diluted in the buffer at concentrations: 0 - 0.2 - 0.4 - 0.6 - 0.8 - 1.2 mg/ml
+\begin{center}
+	\begin{tabular}{lrp{7cm}r} \hline\hline
+\textbf{Dilution} & \textbf{Amount ($\mu$l)} 	 & \textbf{ 1M NAOH ($\mu$l)} & \textbf{ Conc. (mg/ml)} \\
+\hline
+ \textbf{}	               &                                                               & 					                        & \\
+ \hline
+ \textbf{A1}	 	& 50$\mu$l [A]	                                        & 50							& 1.6\\
+ \hline
+ \textbf{A2}	 	& 50$\mu$l [A1]			              & 50						        & 0.8\\
+ \hline
+ \textbf{A3}	 	& 50$\mu$l [A2]			 	      & 50						       & 0.4\\
+ \hline
+ \textbf{A4}	       &  50$\mu$l [A3]			   	              & 50						       & 0.2\\
+ \hline
+ \textbf{A5}	       & 50$\mu$l [A4]	                                       & 50					               & 0.1\\
+ \hline
+ \textbf{A6}	       &                                                               & 50					               & 0.0\\
+ \hline
+ \textbf{}	               &                                                               & 					                        & \\
+ \hline
+
+ \textbf{B1}	      & 30$\mu$l [A] 	  	                               & 50					               & 1.2 \\
+ \hline
+ \textbf{B2}	      & 50$\mu$l [B1]                                          &50					              & 0.6\\
+ \hline
+ \textbf{B3}	      & 50$\mu$l [B2]		                               & 50						      & 0.3\\
+\hline
+	\end{tabular}
+\end{center}
+\item Add 800 $\mu$l milliQ water (5x dilution, same as volume in SONOP)
+\item Homogenize again with minibeadbeater for 40 seconds
+\item Pipette 5 $\mu$l of calibration standard or sample in 96 well clear plate.
+\item Add 25 $\mu$l of reagent A in each well (standards and samples).(If samples contain detergent than 20 $\mu$l of reagent S is added to 1 ml of reagent A)
+\item Add 200 $\mu$l of reagent B to each well (standards and samples).
+\item Keep the plate for 15 minutes at room temperature and measure the absorbance at wavelengths 750 or 650* nm  (Stable for 1 hour)
+\end{enumerate}
+\item \textbf{Remarks:} With the Biorad reader, please use 655nm wavelength instead. 
+\end{itemize}
 
 \end{document}
