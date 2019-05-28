@@ -18,7 +18,7 @@ Project Title: \textbf{Integrated Tissue Slice Culture and NMR Metabolomics
 \vfill
 {\Huge TISuMR Device Specification\\}
 \vfill
-\includegraphics[width=5cm]{tisumr-logo}
+\includegraphics[width=5cm]{tisumr-logo-small}
 \end{center}
 \vfill
 Document version: 0.0.0 \\
@@ -86,20 +86,16 @@ have cross sectional dimensions of 200$\pm$100$\times$200$\pm$100 $\mu$m$^2$.
 \item \textbf{Chip or device material:} Polycarbonate is used for the chip or
 device fabrication.
 \item \textbf{Temperature:}. The PCLS culture is performed at
-37$\pm$0.5$^{\circ}$.
-\item \textbf{Gas composition:} Either carbogen (95 \% O$_2$ + 5 \% carbon
-dioxide) or a mixture (80 \% O$_2$+ 10 \% nitrogen +5 \% carbon dioxide) is used
-for the culture.
+37$\pm$0.5 $^{\circ}$C.
+\item \textbf{Gas composition:} Either carbogen (95 \% O$_2$ + 5 \% CO$_2$) or a mixture (80 \% O$_2$+ 10 \% N$_2$ +5 \% CO$_2$) is used
+for the culture. Gas composition with 70 \% or more O$_2$ partial pressure have the same effect on viability of PCLS.
 \item \textbf{Viability standards:} Adenosine tri(phosphate) (ATP) content in
 the tissue slice after culture is used as a measure of viability. As a rule,
 tissue slices can be considered viable if they contain at least 6~pmol of ATP
-per mg of protein. {\color{red}The protocols for ATP determination are given in section ...}
+per mg of protein. The protocols for ATP determination is given in section\ref{atp} and for protein determination is given in section\ref{protein}.
 \item \textbf{Medium composition:} William E  with Glutamax + Glucose (1.375
 g/500mL William E medium) + Gentamycine (500$\mu$L/500mL)
-\item \textbf{Sterilization:} Ethanol will be used for sterilization.
-{\color{red} Provide ethanol concentration and minimum exposure time.
-Define internal vs external sterilisation. How are ancillary perfusion
-equipment to be sterilised (e.g., tubing, syringes, connectors, gaskets?)}
+\item \textbf{Sterilization:} Sterilisation will be preformed by exposure of the equipment to 70\% ethanol in water for 5 minutes and drying them afterwards. Tubings will be sterilised by flowing 70\% ethanol in water for half an hour and then flow phosphate-buffered saline (PBS) for a wash.
 \end{itemize}
 
 \section{Allowed variations}
@@ -109,8 +105,9 @@ equipment to be sterilised (e.g., tubing, syringes, connectors, gaskets?)}
 pumps or centrifuge.
 \item \textbf{Fabrication method:} The devices can be made through machining or
 bonding layers by different protocols.
-\item \textbf{Flow rates:}. Range of flow rates will be decided through
-optimization.
+\item \textbf{Flow rates:} Range of flow rates will be decided through
+optimisation.
+\item \textbf{LDH:} If ATP content can not be measured due to the nature of experiment, LDH (lactate dehydrogenase) can be used as a viability indicator.
 \end{itemize}
 
 \begin{figure}
@@ -121,5 +118,66 @@ optimization.
 chamber is 0.7 mm. The thickness of the chamber is 0.5 mm.}
 \label{fig:tisumr-device}
 \end{figure}
+
+\section{ATP determination}
+\label{atp}
+\begin{itemize}
+\item \textbf{Goal:} Assay to determine the ATP levels in tissue slices.
+\item \textbf{Materials:}
+\begin{itemize}
+\item 1.5mL tubes
+\item White 96-wells plate
+\item Minibead-beater
+\item Repetitive pipet with 50 $\mu$l tip
+\item Synergy HT plate reader
+\item ATP positive control (P) (-80 $^{\circ}$C) (1 aliquot/plate)
+\end{itemize}
+\item \textbf{Solutions}
+\begin{itemize}
+\item \textbf{SONOP (Sonification Solution), Ethanol (70\% v/v) containing 2mM EDTA (M=372.24 g/mol) with pH=10.9}
+For 1L: Dissolve 0.744g EDTA in $\pm$ 200ml of MQ-water, adjust pH with 5M NaOH to pH=10.9, add 60mL MQ-water and 740ml ethanol (96\%)
+\item \textbf{100mM Tris-HCl, 2mM EDTA buffer (pH 7.6-8.0)} For 500ml: Dissolve 6.0g Tris (M=121.14) (Tris(hydroxymethyl)amniophen; Merck) and 0.37g EDTA (Triplex III; M=372.24) in $\pm$ 300ml MQ-water, adjust pH with 6N HCl and fill up to 500ml total volume with MQ-water.
+\item \textbf{ATP Bioluminescence assay kit Roche.}
+\begin{itemize}
+\item Luciferase reagent lyophilized (white cap):
+Dissolve lyophilized luciferase in exactly 10.0 ml MQ-water and mix by swinging. Do not vortex.
+\item ATP-standard $\pm$ 10mg lyophilized (red cap):
+ Dissolve the ATP-standard from the kit to exactly 10mg/ml (= 16.5mM) with MQ-water) and aliqoute 20 $\mu$L and store in -80 $^{\circ}$C
+\end{itemize}
+\end{itemize}
+\item \textbf{Protocol}:After the incubation put 1 slice in 1 ml SONOP in a safelock vial, 1 cup of minibead and snap frozen in liquid N$_2$.
+\begin{enumerate}
+\item Label a new set of 1.5mL tubes (equal to the amount of ATP-samples).
+\item Get luciferase from fridge or freezer, this needs to be at room temperature.
+\item Homogenize the sample with minibead-beater for \textbf{2$\times$45sec}. Store the samples back on ice.
+\item Centrifuge homogenate \textbf{5min at 13.000 rpm at 4 $^{\circ}$C}. Transfer the supernatant into the new tube and \textbf{keep on ice}. The tube with precipitate is dried at 37 $^{\circ}$C (1 day) or at RT (3 days) for protein measurement.
+\item Prepare a calibration curve and store tubes on ice:
+\begin{center}
+	\begin{tabular}{lrp{7cm}r} \hline\hline
+\textbf{Dilution} & \textbf{Amount ($\mu$l)} 	 & \textbf{ Tris/EDTA Buffer ($\mu$l)} & \textbf{ Conc. (M)} \\
+\hline
+ \textbf{A}	 	& 10$\mu$l ATP-standard (S)	& 90							& 1.65$\times$ 10$^{-3}$\\
+ \hline
+ \textbf{B}	 	& 50$\mu$l [A]				 & 450						& 1.65 $\times$ 10$^{-4}$\\
+ \hline \textbf{C}	 	& 50$\mu$l [B]			 	& 450						& 1.65 $\times$ 10$^{-5}$\\
+ \hline \textbf{Cal 1}	&  50$\mu$l [C]			   	& 450						& 1.65 $\times$10$^{-6}$\\
+ \hline \textbf{Cal 2}	& \textbf{100$\mu$l [Cal 1]!}	& \textbf{400}					& 3.30 $\times$ 10$^{-7}$\\
+ \hline \textbf{Cal 3}	& 50$\mu$l [Cal 1]!	 	  	& 450						& 1.65 $\times$ 10$^{-7}$\\
+ \hline \textbf{Cal 4}	& \textbf{100$\mu$l [Cal 3]!}	& \textbf{400}					& 3.30 $\times$ 10$^{-8}$\\
+ \hline \textbf{Cal 5}	& 50$\mu$l [Cal 3]!			& 450						& 1.65 $\times$ 10$^{-8}$\\
+\hline
+	\end{tabular}
+\end{center}
+\item Pipet 5$\mu$l Blank (Tris/EDTA), 5$\mu$l positive control, and 5$\mu$L supernatant of each sample in duplo to the white 96-wells plate.
+\item Add 45$\mu$l Tris/EDTA buffer to all wells containing blank, positive control or sample. 
+\item Pipette 50$\mu$l diluted calibration curve in duplo in the plate.
+\item Add 50$\mu$l luciferase (do not vortex) to every well using a repetitive pipet or a multichannel pipet.
+\item Shake plate a little and measure plate after 0min, 5min and 10 min using the luminometer (set-up SynergyHT ATP protocol, kinetic read (3 timepoints interval 5 min) for luminenscence).
+\end{enumerate}
+\item \textbf{Remarks:} Important: The ATP in the slices is sensitive for breakdown by present enzymes. Therefore store samples at -80 $^{\circ}$C and keep tubes at 4$^{\circ}$C throughout the determination.
+\end{itemize}
+
+\section{Protein determination}
+\label{protein}
 
 \end{document}
